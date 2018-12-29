@@ -1,0 +1,1 @@
+<?php/**Remove type attribute for Javascript and style in WordPress*For SEO and Html Validation*/add_filter('style_loader_tag', 'codeless_remove_type_attr', 10, 2);add_filter('script_loader_tag', 'codeless_remove_type_attr', 10, 2);function codeless_remove_type_attr($tag, $handle) {    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );}?>
